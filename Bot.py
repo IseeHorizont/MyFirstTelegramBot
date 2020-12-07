@@ -6,7 +6,7 @@ import telebot
 from telebot import types
 from telebot.types import Message
 
-TOKEN = '1280787634:AAEdtygfc6x6tEtxmJnL2_SRqnc7WKmF89c'
+TOKEN = ''
 STICKER_ID = 'CAACAgIAAxkBAAM1X17aAXBfO5mlXXyDQmDbK6NSomkAAhMFAAJ8BQcbiV4bVmg06GsbBA' # лови двоечку
 STICKER_ID2 = 'CAACAgIAAxkBAAM5X17ahOJGKOnF7MjEewoQITRDVkUAAggFAAJ8BQcbMyyxQklu1RUbBA' # привет рабы системы
 STICKER_ID3 = 'CAACAgIAAxkBAAM6X17bvbVKDSJLcEdfPYs1rY1KSQwAAhwFAAJ8BQcblxtvdZORb4EbBA' #чьих будешь
@@ -27,7 +27,7 @@ def command_handler(message: Message):
 def echo_digits(message: Message):
     print(message.from_user.id)
     if '300' in message.text:
-        bot.reply_to(message, 'Отсоси у тракториста, с уважением :)')
+        bot.reply_to(message, 'От..си у тракториста, с уважением :)')
         return
     if 'Привет' in message.text:
         bot.send_sticker(message.chat.id, STICKER_ID2)
